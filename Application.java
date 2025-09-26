@@ -24,6 +24,7 @@ class Bank {
         } else {
             System.out.println("Account not found!");
         }
+
 		#feature102 code changes by Ethan Developer for  User Transactions in Sep 2024
 		public static void main(String[] args) {
         Bank bank = new Bank();
@@ -41,4 +42,18 @@ class Bank {
         bank.displayAccountInfo("102");
     }
 	#end of feature102
+
+		#feature101 code changes by Vivek for Reports Module in Oct2024
+		 public void performTransaction(String accountNumber, double amount) {
+        if (accounts.containsKey(accountNumber)) {
+            Account account = accounts.get(accountNumber);
+            account.deposit(amount);
+            System.out.println("Transaction successful. Updated balance: $" + account.getBalance());
+        } else {
+            System.out.println("Account not found!");
+        }
+    }
+}
+#end of feature101 code
+
     }
